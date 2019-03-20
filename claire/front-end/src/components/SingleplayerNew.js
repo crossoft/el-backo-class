@@ -1,17 +1,18 @@
 import React from 'react'
 import _ from 'lodash'
-import { Link } from 'react-router-dom'
+import Button from './Button'
+import MenuContainer from './MenuContainer'
 
 export default () => (
-  <div>
+  <MenuContainer>
     <div>
       In new singleplayer route here
     </div>
 
     {_.map(_.range(2, 7), (n) => (
-      <Link key={n} to={`/singleplayer/new/${n}`}>
+      <Button key={n} to={`/singleplayer/new/${n}`}>
         {n}
-      </Link>
+      </Button>
     ))}
-  </div>
+  </MenuContainer>
 )
